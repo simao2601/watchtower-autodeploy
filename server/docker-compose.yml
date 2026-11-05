@@ -1,0 +1,18 @@
+services:
+  app:
+    image: ghcr.io/simao2601/watchtower-autodeploy:latest
+    container_name: minhaapp
+    ports:
+      - "80:80"
+    restart: unless-stopped
+
+  watchtower:
+    image: nickfedor/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_POLL_INTERVAL=30
+      - WATCHTOWER_CLEANUP=true
+    command: minhaapp
+    restart: unless-stopped
