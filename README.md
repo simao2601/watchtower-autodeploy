@@ -2,7 +2,7 @@
 
 Topic 13: a running app updates itself after every `git push`, without the CI/CD pipeline ever touching the server.
 
-**Author:** [YOUR NAME] · [COURSE / CLASS] · [DATE]
+**Author:** Simão Pereira · Cloud Computing · 11/12/2026
 
 ---
 
